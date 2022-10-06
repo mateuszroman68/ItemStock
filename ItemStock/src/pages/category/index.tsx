@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import StockItemsList from "../../components/stock-list-items";
-import ProductFilters from "../../components/product-filters";
+import { category } from "../../components/single-item/types";
 
-const CategoryPage = ({categoryList}):JSX.Element => {
-    const [ currentCategory, setCurrentCategory] = useState([])
-    const navigate = useNavigate();
-    console.log('navigate', navigate);
+const CategoryPage = ({categoryList}) => {
+    const [ currentCategory, setCurrentCategory] = useState([0])
+    const params = useParams();
 
-    console.log('Params', useParams());
-   const params = useParams();
     useEffect(() => {
         if(params.categoryid){
             setCurrentCategory([Number(params.categoryid)])
-        }else {
-            setCurrentCategory([2022])
         }
     }, [])
-
+    
+    const activeCategory:category = categoryList.filter( category => category.id === currentCategory.pop()).pop()
+    const categoryName = activeCategory?.name;
+   
     return (
-        <div>
-            <h1>{currentCategory}</h1>
-            <div className="container">
+        <div className="container-2xl ">
+            <h1 className="text-3xl bg-slate-300 rounded-lg text-center mt-20 ">{categoryName}</h1>
+            <div>
                 <StockItemsList currentCategories={currentCategory} />
             </div>
         </div>

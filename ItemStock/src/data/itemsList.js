@@ -12,31 +12,7 @@ export default [
             "volumem": 10,
             "condition": 2
         },
-        "category": [{
-            "id": 2022,
-            "name": "plants",
-            "forEveryone": true
-        },{
-            "id": 2023,
-            "name": "trees",
-            "forEveryone": true
-        },{
-            "id": 2024,
-            "name": "roots",
-            "forEveryone": true
-        },{
-            "id": 2025,
-            "name": "beans",
-            "forEveryone": true
-        },{
-            "id": 2026,
-            "name": "wood",
-            "forEveryone": true
-        },{
-            "id": 2027,
-            "name": "flowers",
-            "forEveryone": true
-        }]
+        "category": [2022,2023,2024]
     },
     {
         "id": 223334,
@@ -51,27 +27,7 @@ export default [
             "volumem": 5,
             "condition": 5
         },
-        "category": [{
-            "id": 2022,
-            "name": "plants",
-            "forEveryone": true
-        },{
-            "id": 2023,
-            "name": "trees",
-            "forEveryone": true
-        },{
-            "id": 2024,
-            "name": "roots",
-            "forEveryone": true
-        },{
-            "id": 2025,
-            "name": "beans",
-            "forEveryone": true
-        },{
-            "id": 2026,
-            "name": "wood",
-            "forEveryone": true
-        }]
+        "category": [2022,2025,2026]
     },
     {
         "id": 999334,
@@ -86,23 +42,7 @@ export default [
             "volumem": 12,
             "condition": 4
         },
-        "category": [{
-            "id": 2022,
-            "name": "plants",
-            "forEveryone": true
-        },{
-            "id": 2023,
-            "name": "trees",
-            "forEveryone": true
-        },{
-            "id": 2024,
-            "name": "roots",
-            "forEveryone": true
-        },{
-            "id": 2025,
-            "name": "beans",
-            "forEveryone": true
-        }]
+        "category": [2023,2024,2025]
     },
     {
         "id": 776554,
@@ -117,15 +57,7 @@ export default [
             "volumem": 13,
             "condition": 5
         },
-        "category": [{
-            "id": 2023,
-            "name": "trees",
-            "forEveryone": true
-        },{
-            "id": 2024,
-            "name": "roots",
-            "forEveryone": true
-        }]
+        "category": [2025,2026]
     },
     {
         "id": 930472,
@@ -140,15 +72,7 @@ export default [
             "volumem": 30,
             "condition": 5
         },
-        "category": [{
-            "id": 2025,
-            "name": "beans",
-            "forEveryone": true
-        },{
-            "id": 2026,
-            "name": "wood",
-            "forEveryone": true
-        }]
+        "category": [2024,2026]
     },
     {
         "id": 385028,
@@ -163,11 +87,7 @@ export default [
             "volumem": 5,
             "condition": 5
         },
-        "category": [{
-            "id": 2025,
-            "name": "beans",
-            "forEveryone": true
-        }]
+        "category": [2025]
     }
 
 ]
