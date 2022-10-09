@@ -44,7 +44,7 @@ const User = ():JSX.Element => {
                     </div>
                     </div>
                     <div className="border-b">
-                        <Link to="/account/campaigns" >
+                        <Link to="/user/changepassword" >
                             <a className="px-4 py-2 hover:bg-gray-100 flex">
                                 <div className="text-green-600">
                                 <svg
@@ -60,10 +60,10 @@ const User = ():JSX.Element => {
                                 </svg>
                                 </div>
                                 <div className="pl-3">
-                                <p className="text-sm font-medium text-gray-800 leading-none">
-                                    Active
+                                <p className="text-sm font-medium text-gray-800 leading-none mt-1">
+                                    Change Your password
                                 </p>
-                                <p className="text-xs text-gray-500">View your active auctions</p>
+                                <p className="text-xs text-gray-500"></p>
                                 </div>
                             </a>
                         </Link>

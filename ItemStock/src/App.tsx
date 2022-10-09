@@ -15,7 +15,11 @@ import UserManage from "./pages/User/user manage";
 import AddItem from "./pages/User/addItem";
 import AllItems from "./pages/User/allItems";
 import MakeAnOffer from "./pages/makeAnOffer";
-
+import Contact from "./pages/contact";
+import LogIn from "./pages/logIn";
+import ResetPassword from "./pages/resetPassword";
+import ChangePassword from "./pages/change password";
+import CreateAccount from "./pages/createAccount";
 const App = () => {
 
   return (
@@ -30,8 +34,13 @@ const App = () => {
           <Route path='/users/manage' element={<UserManage/>} />
           <Route path="/users/add" element={<AddItem/>}/>
           <Route path="/users/all" element={<AllItems/>}/>
+          <Route path="/user/changepassword" element={<ChangePassword/>}/>
           <Route path="*" element={<NoPage/>} />
           <Route path="/item/buy" element={<MakeAnOffer/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/login" element={<LogIn/>} />
+          <Route path="/reset" element={<ResetPassword/>}/>
+          <Route path="/create" element= {<CreateAccount/>}/>
           
           
         </Route>

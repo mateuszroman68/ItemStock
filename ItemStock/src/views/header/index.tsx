@@ -18,9 +18,9 @@ const Header = ():JSX.Element => {
             </div>
         <div>
           <Link className={linkStyles} to="/category">All Items</Link>
-          <Link className={linkStyles} to="/two">Contact</Link>
+          <Link className={linkStyles} to="/contact">Contact</Link>
           <Link className={linkStyles} to="/three">FAQ</Link>
-          <Link className={linkStyles} to="/user">Log In</Link>
+          <Link className={linkStyles} to="/login">Log In</Link>
           
         </div>
       </nav>

@@ -1,11 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const UserManage = (): JSX.Element => {
-	return (
-		<div className="grid grid-cols-12">
+const AddItem = () =>{
+
+
+        return(
+            <div>
+                <div className="grid grid-cols-12">
 			<div className="  m-8 col-span-6 ">
-				<div className="bg-white rounded overflow-hidden shadow-lg ">
+				<div className="bg-white rounded overflow-hidden shadow-lg">
 					<div className="text-center p-6 bg-gray-800 border-b">
 						<svg
 							aria-hidden="true"
@@ -50,7 +53,7 @@ const UserManage = (): JSX.Element => {
                     </div>
 					</div>
 					<div className="border-b">
-						<Link to="/user/changepassword">
+						<Link to="/account/campaigns">
 							<a className="px-4 py-2 hover:bg-gray-100 flex">
 								<div className="text-green-600">
 									<svg
@@ -66,8 +69,8 @@ const UserManage = (): JSX.Element => {
 									</svg>
 								</div>
 								<div className="pl-3">
-									<p className="text-sm font-medium text-gray-800 leading-none mt-1">Change Your password</p>
-								
+									<p className="text-sm font-medium text-gray-800 leading-none">Active</p>
+									<p className="text-xs text-gray-500">View your active auctions</p>
 								</div>
 							</a>
 						</Link>
@@ -109,10 +112,10 @@ const UserManage = (): JSX.Element => {
 				</div>
 			</div>
 
-			<div className='m-8 col-span-6   bg-gray-800 border-b  rounded   overflow-hidden shadow-lg h-min '>
-            <div className="flex flex-1 m-2  ">
-            <div className="mb-3 xl:w-96 flex flex-1   ">
-            <label  className="form-label inline-block mt-4 ml-2 mr-2 mb-2 text-gray-50 w-2/4 " >Name</label >
+			<div className='m-8 col-span-6 bg-gray-800 border-b  rounded   overflow-hidden shadow-lg'>
+            <div className="flex flex-1 m-2">
+            <div className="mb-3 xl:w-96 flex flex-1  ">
+            <label  className="form-label inline-block mt-4 ml-2 mr-2 mb-2 text-gray-50 w-2/4 " >Title</label >
             <input
             type="text"
             className="
@@ -129,11 +132,12 @@ const UserManage = (): JSX.Element => {
                 rounded
                 transition
                 ease-in-out
-                mt-2
+                m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                mt-2
             "
             id="exampleFormControlInput1"
-            placeholder="Your Name"
+            placeholder="e.g. Air Pods 3 "
             />
         </div>
         
@@ -141,7 +145,40 @@ const UserManage = (): JSX.Element => {
 
 <div className="flex flex-1 m-2">
             <div className="mb-3 xl:w-96 flex flex-1  ">
-            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Nickname</label >
+            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Category</label >
+            
+
+<select id="countries" className="
+                form-control
+                block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-zinc-400
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+            "
+ >
+  <option className="text-black">Please select</option>
+  <option value="US">United States</option>
+  <option value="CA">Canada</option>
+  <option value="FR">France</option>
+  <option value="DE">Germany</option>
+</select>
+
+        </div>
+</div>
+
+<div className="flex flex-1 m-2">
+            <div className="mb-3 xl:w-96 flex flex-1  ">
+            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Description</label >
             <input
             type="text"
             className="
@@ -155,6 +192,7 @@ const UserManage = (): JSX.Element => {
                 text-gray-700
                 bg-white bg-clip-padding
                 border border-solid border-gray-300
+                h-60
                 rounded
                 transition
                 ease-in-out
@@ -162,14 +200,45 @@ const UserManage = (): JSX.Element => {
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
             "
             id="exampleFormControlInput1"
-            placeholder="Create an unique nick"
+            placeholder=""
             />
         </div>
 </div>
 
 <div className="flex flex-1 m-2">
             <div className="mb-3 xl:w-96 flex flex-1  ">
-            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Email</label >
+            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Condition</label >
+            <select id="countries" className="
+                form-control
+                block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-zinc-400
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+            "
+ >
+  <option className="text-black">Please select</option>
+  <option>New</option>
+  <option >Very good</option>
+  <option >Good</option>
+  <option >Average</option>
+  <option >Poor</option>
+
+</select>
+        </div>
+</div>
+<div className="flex flex-1 m-2">
+            <div className="mb-3 xl:w-96 flex flex-1  ">
+            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Price</label >
             <input
             type="text"
             className="
@@ -190,16 +259,14 @@ const UserManage = (): JSX.Element => {
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
             "
             id="exampleFormControlInput1"
-            placeholder="example@gmail.com"
+            placeholder=""
             />
         </div>
 </div>
 
-
-
 <div className="flex flex-1 m-2">
             <div className="mb-3 xl:w-96 flex flex-1  ">
-            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Phone</label >
+            <label  className="form-label inline-block m-2 text-gray-50 w-2/4 " >Amount</label >
             <input
             type="text"
             className="
@@ -220,7 +287,7 @@ const UserManage = (): JSX.Element => {
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
             "
             id="exampleFormControlInput1"
-            placeholder=" +1-415-55552671"
+            placeholder=" How many items do You have?"
             />
         </div>
         
@@ -228,8 +295,8 @@ const UserManage = (): JSX.Element => {
 
 <div className=" flex items-center justify-center mb-4">
 
-    <button className="bg-neutral-200 px-12 py-4 text-xl border-b  rounded  text-neutral-600 hover:text-grey-800 hover:shadow-[inset_13rem_0_0_0] hover:shadow-amber-200 duration-[400ms,700ms] transition-[color,box-shadow]">
-        Save
+    <button className="bg-neutral-200  border-b  rounded   px-12 py-4 text-xl text-neutral-600 hover:text-grey-800 hover:shadow-[inset_13rem_0_0_0] hover:shadow-amber-200 duration-[400ms,700ms] transition-[color,box-shadow] rounded">
+        Add an item
     </button>
 
 </div>
@@ -238,6 +305,8 @@ const UserManage = (): JSX.Element => {
 			</div>
 		</div>
 	);
-};
+            </div>
+        )
+}
 
-export default UserManage;
+export default AddItem;
